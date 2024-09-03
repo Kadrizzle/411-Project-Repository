@@ -35,7 +35,12 @@ namespace _411Api.Controllers
         {
             await _vapesService.CreateAsync(newVape);
 
-            return CreatedAtAction(nameof(Get), new { id = newVape.Id }, newVape);
+            return CreatedAtAction(nameof(Get), new { 
+                id = newVape.Id, 
+                name = newVape.Name, 
+                companyName = newVape.CompanyName, 
+                nicotineConcentration = newVape.NicotineConcentration },
+                newVape);
         }
 
         [HttpPut("{id:length(24)}")]
