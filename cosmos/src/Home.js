@@ -50,10 +50,11 @@ const styles = {
     borderRadius: "10px",
   },
   cosmosLogo: {
-    marginBottom: "10px",
+    marginBottom: "60px",
   },
   logo: {
     animation: "spin 5s linear infinite",
+    marginBottom: "60px",
   },
   subtitle: {
     fontSize: "1.5rem",
