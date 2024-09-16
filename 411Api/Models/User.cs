@@ -11,6 +11,8 @@ namespace _411Api.Models
         public string? Id { get; set; }
         public string? UserName { get; set; }
         public List<Vape>? Vapes { get; } = [];
+        public ICollection<VapeHitStatistic> VapeHitStatistic { get; } = new List<VapeHitStatistic>();
+        public ICollection<VapeMoneyStatistic> VapeMoneyStatistic { get; } = new List<VapeMoneyStatistic>();
 
     }
 }
