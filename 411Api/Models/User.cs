@@ -10,9 +10,8 @@ namespace _411Api.Models
         [BsonRepresentation(BsonType.ObjectId)]
         public string? Id { get; set; }
         public string? UserName { get; set; }
-        public List<Vape>? Vapes { get; } = [];
+        public List<Vape>? Vapes { get; set; } = [];
         public ICollection<VapeHitStatistic> VapeHitStatistic { get; } = new List<VapeHitStatistic>();
         public ICollection<VapeMoneyStatistic> VapeMoneyStatistic { get; } = new List<VapeMoneyStatistic>();
-
     }
 }
