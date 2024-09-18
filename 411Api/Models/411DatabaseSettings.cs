@@ -7,5 +7,9 @@
         public string DatabaseName { get; set; } = null!;
 
         public string VapesCollectionName { get; set; } = null!;
+
+        public string UserCollectionName { get; set; } = null!;
+
+        public string UserDtoCollectionName { get; set; } = null!;
     }
 }

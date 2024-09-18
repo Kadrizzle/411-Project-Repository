@@ -36,10 +36,10 @@ namespace _411Api.Controllers
         {
             await _vapesService.CreateAsync(newVape);
 
-            return CreatedAtAction(nameof(Get), new { 
-                id = newVape.Id, 
-                name = newVape.Name, 
-                companyName = newVape.CompanyName, 
+            return CreatedAtAction(nameof(Get), new {
+                id = newVape.Id,
+                name = newVape.Name,
+                companyName = newVape.CompanyName,
                 nicotineConcentration = newVape.NicotineConcentration },
                 newVape);
         }
@@ -55,7 +55,7 @@ namespace _411Api.Controllers
             }
 
             updatedVape.Id = vape.Id;
-
+            
             await _vapesService.UpdateAsync(id, updatedVape);
 
             return NoContent();
