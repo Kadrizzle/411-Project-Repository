@@ -10,6 +10,5 @@
 
         public string UserCollectionName { get; set; } = null!;
 
-        public string UserDtoCollectionName { get; set; } = null!;
     }
 }

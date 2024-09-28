@@ -31,7 +31,7 @@ namespace _411Api.Services
         public async Task CreateAsync(Vape newVape) =>
             await _vapesCollection.InsertOneAsync(newVape);
 
-        public async Task UpdateAsync(string id, Vape updatedVape ) =>
+        public async Task UpdateAsync(string id, Vape updatedVape) =>
             await _vapesCollection.ReplaceOneAsync(x => x.Id == id, updatedVape);
 
         public async Task RemoveAsync(string id) =>
