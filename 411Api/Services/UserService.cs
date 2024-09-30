@@ -23,19 +23,14 @@ namespace _411Api.Services
 
         }
 
-        //The GET and GETALL are pulling from UserDto so we can protect user passwords
         public async Task<List<User>> GetAsync() =>
             await _userCollection.Find(_ => true).ToListAsync();
 
         public async Task<User?> GetAsync(string id) =>
             await _userCollection.Find(x => x.Id == id).FirstOrDefaultAsync();
 
-        public async Task CreateAsyncForUser(User newUser) =>
+        public async Task CreateAsync(User newUser) =>
             await _userCollection.InsertOneAsync(newUser);
-
-        public async Task CreateAsyncForUserDto(User newUser) =>
-            await _userCollection.InsertOneAsync(newUser);
-
 
         public async Task UpdateAsync(string id, User updatedUser) =>
             await _userCollection.ReplaceOneAsync(x => x.Id == id, updatedUser);
