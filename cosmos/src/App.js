@@ -2,6 +2,7 @@ import React from "react";
 import { Routes, Route, Link } from "react-router-dom";
 import Home from "./Home";
 import About from "./About";
+import Login from './Login';
 
 const App = () => {
   return (
@@ -18,12 +19,18 @@ const App = () => {
               About
             </Link>
           </li>
+          <li style={styles.navItem}>
+            <Link to="/login" style={styles.navLink}>
+              Login
+            </Link>
+          </li>
         </ul>
       </nav>
 
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
+        <Route path="/login" element={<Login />} /> {/* Add Login route */}
       </Routes>
     </div>
   );
