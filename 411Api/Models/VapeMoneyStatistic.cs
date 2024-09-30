@@ -11,7 +11,9 @@ namespace _411Api.Models
         public string? Id { get; set; }
         public int MoneySpentOnVape { get; set; }
         public DateTime DateVapeWasBought { get; set; }
-        public int UserId { get; set; }
+        [BsonId] 
+        [BsonRepresentation(BsonType.ObjectId)]
+        public string? UserId { get; set; }
         public User User { get; set; } = null!;
 
     }
