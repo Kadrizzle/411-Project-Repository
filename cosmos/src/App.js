@@ -1,10 +1,23 @@
-import React from "react";
+import React, { useState } from "react";
 import { Routes, Route, Link } from "react-router-dom";
 import Home from "./Home";
 import About from "./About";
 import Login from './Login';
+import UserInfo from './UserInfo'; // Refers to your input table
+import CalendarView from "./CalendarView";
+import GraphView from "./GraphView";
 
 const App = () => {
+  const [data, setData] = useState({
+    Monday: 0,
+    Tuesday: 0,
+    Wednesday: 0,
+    Thursday: 0,
+    Friday: 0,
+    Saturday: 0,
+    Sunday: 0,
+  });
+
   return (
     <div>
       <nav style={styles.navbar}>
@@ -24,13 +37,25 @@ const App = () => {
               Login
             </Link>
           </li>
+          <li style={styles.navItem}>
+            <Link to="/userInfo" style={styles.navLink}>
+              User Info 
+            </Link>
+          </li>
         </ul>
       </nav>
 
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
-        <Route path="/login" element={<Login />} /> {/* Add Login route */}
+        <Route path="/login" element={<Login />} />
+        <Route path="/userInfo" element={
+          <div>
+            <UserInfo data={data} setData={setData} />
+            <CalendarView />
+            <GraphView data={data} />
+          </div>
+        } />
       </Routes>
     </div>
   );
