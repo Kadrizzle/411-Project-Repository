@@ -2,6 +2,7 @@ import React from "react";
 import { Routes, Route, Link } from "react-router-dom";
 import Home from "./Home";
 import About from "./About";
+import OurTech from "./OurTech";
 
 const App = () => {
   return (
@@ -18,12 +19,18 @@ const App = () => {
               About
             </Link>
           </li>
+          <li style={styles.navItem}>
+            <Link to="/OurTech" style={styles.navLink}>
+              Our Technology
+            </Link>
+          </li>
         </ul>
       </nav>
 
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
+        <Route path="/OurTech" element={<OurTech />} />
       </Routes>
     </div>
   );
