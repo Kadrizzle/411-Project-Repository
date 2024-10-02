@@ -1,5 +1,21 @@
 .App {
   text-align: center;
+  margin: 20px;
+}
+
+table {
+  margin: 20px auto;
+  border-collapse: collapse;
+}
+
+th, td {
+  border: 1px solid #ccc;
+  padding: 10px;
+}
+
+input {
+  width: 50px;
+
 }
 
 .navbar {
