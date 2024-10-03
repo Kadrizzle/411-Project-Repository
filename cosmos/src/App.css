@@ -1,38 +1,44 @@
-/* Existing styles */
 .App {
   text-align: center;
 }
 
 .navbar {
-  background: linear-gradient(to right, #56135a, #9a90df, #d3c3e0, #e2a965); /* Updated yellow color */
+  background: linear-gradient(to right, #56135a, #9a90df, #d3c3e0, #e2a965);
   padding: 15px 20px; /* Increased padding for more space */
   border-radius: 8px; /* Rounded edges */
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Deeper shadow for depth */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
 .home-container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  min-height: 100vh;
+  justify-content: flex-start; /* Changed to flex-start to align items at the top */
+  min-height: 100vh; /* Keep full height for layout */
   background-color: white;
-  padding: 20px;
+  padding: 20px; /* Adjust padding if needed */
 }
 
 .header-text {
-  font-size: 1.5rem; /* Responsive font size */
-  color: #007bff;
+  font-size: 2rem; /* Larger font size */
+  color: white; /* White text color */
+  background-color: transparent; /* No background color */
+  border-radius: 8px; /* Rounded edges for the border */
+  padding: 20px; /* Increased padding for spacing */
+  margin: 10px 0; /* Reduced margin to bring text closer to the top */
+  position: relative; /* For positioning effects */
+  z-index: 1; /* Ensure it appears above other elements */
+  font-weight: bold; /* Make text bold */
+  text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black; /* Creates black border around letters */
 }
 
-/* Centering navbar items and removing bullet points */
 .navbar-nav {
-  display: flex; /* Use flexbox to align items horizontally */
-  justify-content: flex-start; /* Align items to the left */
-  list-style: none; /* Remove bullet points */
-  width: auto; /* Allow auto width for better alignment */
-  padding-left: 0; /* Remove default padding */
-  margin: 0; /* Remove default margin */
+  display: flex;
+  justify-content: flex-start;
+  list-style: none;
+  width: auto;
+  padding-left: 0;
+  margin: 0;
 }
 
 .nav-item {
@@ -40,24 +46,68 @@
 }
 
 .nav-link {
-  background-color: transparent; /* Make background transparent */
-  color: white; /* Text color */
-  border: 2px solid white; /* White border */
-  padding: 10px 20px; /* Button padding */
-  border-radius: 5px; /* Rounded corners */
-  text-decoration: none; /* Remove underline */
-  transition: background-color 0.3s, color 0.3s; /* Transition for hover effects */
+  background-color: transparent; /* Keep background transparent */
+  color: white; /* White text color */
+  border: 2px solid transparent; /* Set border to transparent initially */
+  padding: 10px 15px; /* Padding for button */
+  border-radius: 5px; /* Rounded edges */
+  text-decoration: none; /* No underline */
+  transition: background-color 0.3s, color 0.3s;
+  font-weight: bold; /* Make text bold */
+  text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black; /* Creates black border around letters */
 }
 
 .nav-link:hover {
-  background-color: rgba(255, 255, 255, 0.2); /* Slightly visible background on hover */
-  color: #e2a965; /* Change text color to yellow on hover */
+  background-color: rgba(255, 255, 255, 0.2); /* Background on hover */
+  color: #e2a965; /* Change text color on hover */
+}
+
+.header-text {
+  font-size: 2rem; /* Larger font size */
+  color: white; /* White text color */
+  background-color: transparent; /* No background color */
+  border-radius: 8px; /* Rounded edges for the border */
+  padding: 30px; /* Increased padding for spacing */
+  margin-bottom: 90px; /* Space between text and logos */
+  margin-top: 40px;
+  position: relative; /* For positioning effects */
+  z-index: 1; /* Ensure it appears above other elements */
+  font-weight: bold; /* Make text bold */
+  text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black; /* Creates black border around letters */
+}
+
+/* Create a gradient border */
+.header-text::before {
+  content: ""; /* Empty content for the pseudo-element */
+  position: absolute; /* Absolute positioning */
+  top: -4px; /* Adjust positioning */
+  left: -4px; /* Adjust positioning */
+  right: -4px; /* Adjust positioning */
+  bottom: -4px; /* Adjust positioning */
+  background: linear-gradient(to right, #56135a, #9a90df, #d3c3e0, #e2a965); /* Gradient background */
+  border-radius: 10px; /* Slightly larger rounded edges */
+  z-index: -1; /* Place behind the text */
+  padding: 4px; /* Padding to create a border effect */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Shadow for depth */
 }
 
 /* Logo styles */
 .logo {
-  max-width: 90%; /* Responsive width */
+  max-width: 90%;
   height: auto;
+}
+
+.navbar-logo {
+  width: 100px; /* Set logo size */
+  height: auto; /* Maintain aspect ratio */
+  margin-left: 15px; /* Spacing to the left */
+}
+
+.navbar-collapse {
+  display: flex; /* Use flexbox for alignment */
+  justify-content: space-between; /* Space items out */
+  align-items: center; /* Vertically center the items */
+  width: 100%; /* Ensure full width for spacing */
 }
 
 /* Animation for spinning logo */
