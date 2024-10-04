@@ -23,6 +23,7 @@ const Navbar = () => {
       <nav className="navbar">
         <div className="container-fluid">
           <div className="navbar-collapse d-flex justify-content-between align-items-center">
+            <img src="/COSMOS-purple.png" alt="COSMOS Logo" className="navbar-logo" />
             <ul className="navbar-nav">
               <li className="nav-item">
                 <Link className="nav-link" to="/">
@@ -55,7 +56,6 @@ const Navbar = () => {
                 </Link>
               </li>
             </ul>
-            <img src="/COSMOS-purple.png" alt="COSMOS Logo" className="navbar-logo" />
           </div>
         </div>
       </nav>

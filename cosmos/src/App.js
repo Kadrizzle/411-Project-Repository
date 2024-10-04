@@ -1,8 +1,6 @@
-
-import React from "react";
+import React, { useState } from "react";
 import "./App.css";
 import Navbar from "./components/Navbar";
-
 
 const App = () => {
   const [data, setData] = useState({
@@ -16,10 +14,8 @@ const App = () => {
   });
 
   return (
-
     <div className="App">
       <Navbar />
-
     </div>
   );
 };
