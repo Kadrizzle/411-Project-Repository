@@ -4,8 +4,8 @@ import About from "./About";
 import Login from "./Login";
 import Home from "./Home";
 import UserInfo from "./UserInfo";
-import CalendarView from "./CalendarView"; // Updated from Navbar
-import GraphView from "./GraphView"; // Updated from Navbar
+import CalendarView from "./CalendarView";
+import GraphView from "./GraphView";
 
 const Navbar = () => {
   const [data, setData] = useState({

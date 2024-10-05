@@ -5,9 +5,18 @@
   align-items: center;
   justify-content: flex-start;
   min-height: 100vh;
-  background-color: #ffffff;
 }
 
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgb(29, 29, 29);
+}
+
+/* App container */
 .App {
   text-align: center;
   margin: 20px;
@@ -24,16 +33,42 @@
   }
 }
 
-/* Navbar styling */
+/* Navbar container with flexbox */
 .navbar {
   width: 100vw;
   padding: 10px 0;
-  background: linear-gradient(to right, #56135a, #9a90df, #d3c3e0, #e2a965);
+  background: url("../public/Navbar-Galaxy.jpg") no-repeat center center;
+  background-size: cover;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
   position: fixed;
   top: 0;
   left: 0;
   z-index: 10;
+  display: flex;
+  justify-content: center;
+}
+
+@keyframes move {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 100% 0;
+  }
+}
+
+.navbar {
+  animation: move 40s linear infinite; /* Adjust the duration for speed */
+}
+
+.video-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
 }
 
 .navbar-collapse {
@@ -43,31 +78,34 @@
   padding: 0 20px;
 }
 
+/* Logo styling */
 .navbar-logo {
   width: 150px;
   height: auto;
   filter: brightness(0) invert(1);
+  padding-bottom: 10px;
 }
 
+/* Navbar items aligned to the right */
 .navbar-nav {
   display: flex;
   justify-content: center;
   list-style: none;
-  padding-left: 0;
   margin: 0;
+  padding-right: 20px;
 }
 
 .nav-item {
-  margin: 0 30px;
+  padding: 0px 20px;
 }
 
 .nav-link {
   background-color: transparent;
+  padding: 5px 20px;
   color: white;
   border: 2px solid transparent;
-  padding: 10px 15px;
   border-radius: 5px;
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   text-decoration: none;
   transition: background-color 0.3s, color 0.3s;
   font-weight: bold;
