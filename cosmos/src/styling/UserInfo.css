@@ -1,0 +1,23 @@
+.user-info-container {
+  display: flex; /* Enable Flexbox */
+  justify-content: space-between; /* Space out the boxes */
+  padding: 20px; /* Optional padding for the container */
+}
+
+.user-info-box {
+  background: linear-gradient(135deg, #56135a, #9a90df, #e2a965); /* Gradient background */
+  border-radius: 10px; /* Rounded corners */
+  padding: 20px; /* Inner padding */
+  width: 45%; /* Adjust width to fit both boxes side by side */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional shadow for a 3D effect */
+  color: white; /* Text color */
+}
+
+.user-info-box h2 {
+  font-size: 24px; /* Font size for headings */
+  margin-bottom: 10px; /* Space below the heading */
+}
+
+.user-info-box > div {
+  margin-top: 10px; /* Space above the calendar/graph */
+}

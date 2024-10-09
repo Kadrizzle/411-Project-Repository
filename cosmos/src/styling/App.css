@@ -1,0 +1,151 @@
+/* =====================
+   Main Page Styling
+   ===================== */
+.home-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: 100vh;
+}
+
+.spinning-logo {
+  animation: spin 100s linear infinite; /* Spinning animation */
+  border-radius: 50%; /* Make it circular if the logo is square */
+  overflow: hidden; /* To ensure no overflow from the border */
+}
+
+.logo {
+  width: 100%; /* Full width */
+  max-width: 300px; /* Adjust to your desired size */
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* =====================
+       Global Styles
+       ===================== */
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+}
+
+/* =====================
+       App Container Styles
+       ===================== */
+.App {
+  text-align: center;
+  margin: 20px;
+  padding-top: 120px; /* Prevent content being covered by fixed navbar */
+}
+
+/* =====================
+       Navbar Styles
+       ===================== */
+.navbar {
+  width: 100%;
+  padding: 10px 0; /* Maintain padding */
+  background: linear-gradient(90deg, #56135a, #9a90df, #e2a965);
+  background-size: 100% auto; /* Decrease background size for smoother transition */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10; /* Keep the navbar on top */
+  display: flex;
+  flex-direction: column; /* Stack logo and buttons vertically */
+  align-items: center; /* Center content horizontally */
+  height: 120px; /* Fixed height for the navbar */
+  box-sizing: border-box;
+}
+
+/* =====================
+       Navbar Content Styles
+       ===================== */
+.navbar-content {
+  display: flex;
+  flex-direction: column; /* Stack logo above nav items */
+  align-items: center; /* Center align items horizontally */
+  height: 100%; /* Fill the height of the navbar */
+}
+
+.navbar-logo {
+  width: 150px; /* Fixed size */
+  height: auto;
+  filter: brightness(0) invert(1);
+  padding-bottom: 10px;
+}
+
+/* =====================
+       Navbar Items Styles
+       ===================== */
+.navbar-collapse {
+  display: flex;
+  justify-content: center; /* Center nav items */
+  align-items: center; /* Center align items vertically */
+  height: auto; /* Allow height to adjust */
+  z-index: 11; /* Higher than the navbar background */
+}
+
+.navbar-nav {
+  display: flex;
+  justify-content: flex-end; /* Align nav items to the right */
+  list-style: none;
+  margin: 0;
+  padding-right: 20px;
+}
+
+.nav-item {
+  padding: 0px 30px;
+}
+
+.nav-link {
+  background-color: transparent;
+  padding: 5px 25px;
+  color: white;
+  border: 2px solid transparent;
+  border-radius: 5px;
+  font-size: 1.6rem; /* Reduced font size */
+  text-decoration: none;
+  transition: background-color 0.3s, color 0.3s;
+  font-weight: bold;
+  text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;
+  white-space: nowrap; /* Prevent text from wrapping */
+}
+
+.nav-link:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #e2a965;
+}
+
+/* =====================
+       Media Queries
+       ===================== */
+@media (max-width: 768px) {
+  .navbar {
+    height: 80px; /* Slightly smaller for mobile */
+  }
+
+  .navbar-logo {
+    width: 100px; /* Scale down logo */
+  }
+
+  .nav-link {
+    font-size: 1.2rem; /* Reduce font size */
+    padding: 5px 10px; /* Adjust padding */
+  }
+
+  .nav-item {
+    padding: 0px 10px;
+  }
+}
