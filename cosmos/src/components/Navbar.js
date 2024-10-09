@@ -3,6 +3,7 @@ import { Link, Routes, Route } from "react-router-dom";
 import About from "./About";
 import Login from "./Login";
 import Home from "./Home";
+import OurTech from "./OurTech";
 import UserInfo from "./UserInfo";
 import CalendarView from "./CalendarView"; // Updated from Navbar
 import GraphView from "./GraphView"; // Updated from Navbar
@@ -31,7 +32,7 @@ const Navbar = () => {
               </li>
               <li className="nav-item">
                 <Link className="nav-link" to="/login">
-                  Login
+                  Login/Register
                 </Link>
               </li>
               <li className="nav-item">
@@ -42,6 +43,11 @@ const Navbar = () => {
               <li className="nav-item">
                 <Link className="nav-link" to="/about">
                   About Us
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link className="nav-link" to="/OurTech">
+                  Our Technology
                 </Link>
               </li>
               <li className="nav-item">
@@ -64,8 +70,8 @@ const Navbar = () => {
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/login" element={<Login />} />
-        <Route
-          path="/userInfo"
+        <Route path="/OurTech" element={<OurTech />} />
+        <Route path="/userInfo"
           element={
             <div>
               <UserInfo data={data} setData={setData} />

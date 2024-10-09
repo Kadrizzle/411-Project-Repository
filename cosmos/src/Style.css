@@ -1,0 +1,4 @@
+/* This file is for importing the Assissant font that each page should be using.
+Use for any other CSS imports*/
+
+@import url('https://fonts.googleapis.com/css2?family=Assistant:wght@400;600&display=swap');
