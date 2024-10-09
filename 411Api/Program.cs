@@ -1,3 +1,5 @@
+using _411Api.Models;
+using _411Api.Services;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
