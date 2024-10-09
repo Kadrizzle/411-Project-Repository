@@ -67,5 +67,4 @@ const styles = {
     marginTop: '8px',
     fontStyle: 'italic',
   },
-
 };

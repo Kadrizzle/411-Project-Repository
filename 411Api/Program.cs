@@ -8,6 +8,8 @@ builder.Services.Configure<_411DatabaseSettings>(
     builder.Configuration.GetSection("411DatabaseInfo"));
 
 builder.Services.AddSingleton<VapesService>();
+builder.Services.AddSingleton<UserService>();
+builder.Services.AddSingleton<VapeMoneyStatisticsService>();
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
