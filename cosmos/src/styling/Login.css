@@ -1,0 +1,107 @@
+.login-container {
+  max-width: 400px; /* Limit the maximum width of the container */
+  margin: 50px auto; /* Center the container on the page */
+  padding: 20px; /* Add padding inside the container */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
+  background: linear-gradient(135deg, #56135a, #9a90df, #e2a965); /* Gradient background */
+}
+
+/* Add these styles to your existing App.css */
+.login-container h2,
+.login-container label,
+.login-container input,
+.login-container button {
+  color: white; /* Set text color to white */
+  text-shadow: 1px 1px 2px black; /* Add a black outline effect */
+}
+
+/* Style the inputs and button for better visibility */
+.login-container input {
+  background-color: rgba(255, 255, 255, 0.1); /* Slightly transparent background for inputs */
+  border: 1px solid white; /* White border for inputs */
+  border-radius: 4px; /* Rounded corners for inputs */
+  padding: 10px; /* Padding inside the inputs */
+  width: 100%; /* Full width for inputs */
+  box-sizing: border-box; /* Ensure padding doesn't affect width */
+}
+
+.login-container button {
+  background-color: #9a90df; /* Button color */
+  border: 2px solid white; /* White border for the button */
+  border-radius: 4px; /* Rounded corners for button */
+  padding: 10px; /* Padding inside the button */
+  color: white; /* Text color for button */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: background-color 0.3s, border-color 0.3s; /* Smooth transition for hover effect */
+}
+
+/* Optional: Change button color and border color on hover */
+.login-container button:hover {
+  background-color: #56135a; /* Darken button color on hover */
+  border-color: #e2a965; /* Change border color on hover */
+}
+
+.login-container:hover {
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  font-size: 1.2rem;
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #555;
+}
+
+.form-input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  transition: border-color 0.3s;
+  box-sizing: border-box; /* Ensure padding is included in the width */
+}
+
+.form-input:focus {
+  border-color: #e2a965;
+  outline: none;
+}
+
+.login-button {
+  width: 100%; /* Full width of the container */
+  padding: 10px; /* Space inside the button */
+  background-color: white; /* Change background color to white */
+  color: #007bff; /* Blue text color */
+  border: 1px solid #e2a965; /* Blue border */
+  border-radius: 4px; /* Rounded corners for button */
+  cursor: pointer; /* Change cursor to pointer on hover */
+  font-size: 16px; /* Larger font size */
+  margin-top: 18px;
+  margin-bottom: 15px;
+}
+
+.login-button:hover {
+  background-color: #f0f0f0; /* Light gray on hover */
+}
+
+.signup-prompt {
+  text-align: center;
+  margin-top: 15px;
+  color: white;
+}
+
+.signup-prompt a {
+  color: #ffffff;
+  font-style: italic;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.signup-prompt a:hover {
+  text-decoration: underline;
+}

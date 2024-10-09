@@ -1,34 +1,20 @@
 import React from "react";
+import { Calendar } from "react-calendar";
+import GraphView from "../components/GraphView"; // Updated to use the correct component name
 
-const DataInputTable = ({ data, setData }) => {
-  const handleChange = (day, value) => {
-    setData({ ...data, [day]: Number(value) });
-  };
-
+const UserInfo = () => {
   return (
-    <table>
-      <thead>
-        <tr>
-          <th>Day</th>
-          <th>Value</th>
-        </tr>
-      </thead>
-      <tbody>
-        {Object.keys(data).map((day) => (
-          <tr key={day}>
-            <td>{day}</td>
-            <td>
-              <input
-                type="number"
-                value={data[day]}
-                onChange={(e) => handleChange(day, e.target.value)}
-              />
-            </td>
-          </tr>
-        ))}
-      </tbody>
-    </table>
+    <div className="user-info-container">
+      <div className="login-box">
+        <h2>User Calendar</h2>
+        <Calendar />
+      </div>
+      <div className="login-box">
+        <h2>User Graph</h2>
+        <GraphView />
+      </div>
+    </div>
   );
 };
 
-export default DataInputTable;
+export default UserInfo;
