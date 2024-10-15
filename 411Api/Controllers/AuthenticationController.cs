@@ -107,7 +107,7 @@ namespace _411Api.Controllers
                 if (user is null) return new LoginResponse { Message = "Invalid email/password", Success = false };
                 if (!passwordValid)
                 {
-                    return new LoginResponse { Message = "Invalid email or passowrd", Success = false };
+                    return new LoginResponse { Message = "Invalid email or password", Success = false };
                 }
 
 
@@ -123,7 +123,7 @@ namespace _411Api.Controllers
                 var roleClaims = roles.Select(x => new Claim(ClaimTypes.Role, x));
                 claims.AddRange(roleClaims);
 
-                var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes("jd3k45ns0asd3nb5"));
+                var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes("zJ0J2L2cU8p3T6x9vA0QyH3uK7sDfZ1L"));
                 var creds = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
                 var expires = DateTime.Now.AddMinutes(30);
 

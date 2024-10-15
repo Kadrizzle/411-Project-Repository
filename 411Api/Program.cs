@@ -68,7 +68,6 @@ builder.Services.AddAuthentication(x =>
 
 });
 
-
 builder.Services.AddSingleton<VapesService>();
 builder.Services.AddSingleton<UserService>();
 builder.Services.AddSingleton<VapeMoneyStatisticsService>();
