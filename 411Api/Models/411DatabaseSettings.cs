@@ -12,5 +12,7 @@
 
         public string VapeMoneyStatisticCollectionName { get; set; } = null!;
 
+        public string VapeHitStatisticCollectionName { get; set; } = null!;
+
     }
 }

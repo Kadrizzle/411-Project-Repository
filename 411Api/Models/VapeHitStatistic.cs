@@ -10,7 +10,7 @@ namespace _411Api.Models
         public string? Id { get; set; }
         public int VapeHit { get; set; }
         public DateTime DateVapeWasHit { get; set; }
-        public int UserId { get; set; }
+        public string? UserId { get; set; }
         public User User { get; set; } = null!;
     }
 }
