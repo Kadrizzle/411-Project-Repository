@@ -12,6 +12,16 @@ using System.Text;
 //Comment for the backend branch
 var builder = WebApplication.CreateBuilder(args);
 
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowAll", builder =>
+    {
+        builder.AllowAnyOrigin()
+               .AllowAnyMethod()
+               .AllowAnyHeader();
+    });
+});
+
 BsonSerializer.RegisterSerializer(new GuidSerializer(MongoDB.Bson.BsonType.String));
 BsonSerializer.RegisterSerializer(new DateTimeSerializer(MongoDB.Bson.BsonType.String));
 BsonSerializer.RegisterSerializer(new DateTimeOffsetSerializer(MongoDB.Bson.BsonType.String));
@@ -63,7 +73,7 @@ builder.Services.AddAuthentication(x =>
         ValidateLifetime = true,
         ValidIssuer = "https://localhost:7172",
         ValidAudience = "411Api",
-        IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes("jd3k45ns0asd3nb5")),
+        IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes("zJ0J2L2cU8p3T6x9vA0QyH3uK7sDfZ1L")),
         ClockSkew = TimeSpan.Zero
     };
 
@@ -87,6 +97,8 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+
+app.UseCors("AllowAll");
 
 app.UseHttpsRedirection();
 
