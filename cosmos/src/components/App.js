@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./App.css";
-import Navbar from "./components/Navbar";
+import Navbar from "./Navbar";
 
 const App = () => {
   const [data, setData] = useState({
