@@ -1,7 +1,6 @@
+
 .App {
   text-align: center;
-  margin: 20px;
-
 }
 
 table {
@@ -36,11 +35,16 @@ input {
 }
 
 .navbar {
-  background: linear-gradient(to right, #56135a, #9a90df, #d3c3e0, #e2a965);
-  padding: 15px 20px; /* Increased padding for more space */
-  border-radius: 8px; /* Rounded edges */
+  /* background: linear-gradient(to right, #56135a, #9a90df, #d3c3e0, #e2a965); If we ever want to go back to gradient, then comment this back in*/
+  background: white;
+  padding: 20px 10px;
+  border-radius: 0; /* Remove border-radius if you want it to span edge-to-edge */
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  position: relative; /* This makes sure it doesn’t behave like a block */
+  width: 100vw; /* Full width of the viewport */
+  margin-left: calc(-50vw + 50%); /* Aligns it edge-to-edge */
 }
+
 
 .home-container {
   display: flex;
@@ -75,23 +79,23 @@ input {
 }
 
 .nav-item {
-  margin: 0 15px; /* Spacing between buttons */
+  margin: 0 20px; /* Spacing between buttons */
 }
 
 .nav-link {
   background-color: transparent; /* Keep background transparent */
-  color: white; /* White text color */
+  color: black; /* White text color */
   border: 2px solid transparent; /* Set border to transparent initially */
   padding: 10px 15px; /* Padding for button */
   border-radius: 5px; /* Rounded edges */
   text-decoration: none; /* No underline */
   transition: background-color 0.3s, color 0.3s;
-  font-weight: bold; /* Make text bold */
-  text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black; /* Creates black border around letters */
+  font-size: 22px;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
 }
 
 .nav-link:hover {
-  background-color: rgba(255, 255, 255, 0.2); /* Background on hover */
+  background-color: rgba(69, 11, 144, 0.750); /* Background on hover */
   color: #e2a965; /* Change text color on hover */
 }
 
@@ -131,9 +135,10 @@ input {
 }
 
 .navbar-logo {
-  width: 100px; /* Set logo size */
+  width: 300px; /* Set logo size */
   height: auto; /* Maintain aspect ratio */
-  margin-left: 15px; /* Spacing to the left */
+  margin-left: 0px; /* Spacing to the left */
+  margin-right: 75px;
 }
 
 .navbar-collapse {
