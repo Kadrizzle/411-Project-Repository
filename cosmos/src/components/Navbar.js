@@ -22,38 +22,34 @@ const Navbar = () => {
   return (
     <>
       <nav className="navbar">
-        <div className="container-fluid">
-          <div className="navbar-collapse d-flex justify-content-between align-items-center">
-            <ul className="navbar-nav">
-              <li className="nav-item">
-                <Link className="nav-link" to="/">
-                  Home
-                </Link>
-              </li>
-              <li className="nav-item">
-                <Link className="nav-link" to="/login">
-                  Login/Register
-                </Link>
-              </li>
-              <li className="nav-item">
-                <Link className="nav-link" to="/userInfo">
-                  User Info
-                </Link>
-              </li>
-              <li className="nav-item">
-                <Link className="nav-link" to="/about">
-                  About Us
-                </Link>
-              </li>
-              <li className="nav-item">
-                <Link className="nav-link" to="/OurTech">
-                  Our Technology
-                </Link>
-              </li>
-            </ul>
-            <img src="/COSMOS-purple.png" alt="COSMOS Logo" className="navbar-logo" />
-          </div>
-        </div>
+        <img src="/COSMOS-purple.png" alt="COSMOS Logo" className="navbar-logo" />
+        <ul className="navbar-nav">
+          <li className="nav-item">
+            <Link className="nav-link" to="/">
+              Home
+            </Link>
+          </li>
+          <li className="nav-item">
+            <Link className="nav-link" to="/login">
+              Login/Register
+            </Link>
+          </li>
+          <li className="nav-item">
+            <Link className="nav-link" to="/userInfo">
+              User Info
+            </Link>
+          </li>
+          <li className="nav-item">
+            <Link className="nav-link" to="/about">
+              About Us
+            </Link>
+          </li>
+          <li className="nav-item">
+            <Link className="nav-link" to="/OurTech">
+              Our Technology
+            </Link>
+          </li>
+        </ul>
       </nav>
 
       <Routes>
@@ -61,7 +57,8 @@ const Navbar = () => {
         <Route path="/about" element={<About />} />
         <Route path="/login" element={<Login />} />
         <Route path="/OurTech" element={<OurTech />} />
-        <Route path="/userInfo"
+        <Route
+          path="/userInfo"
           element={
             <div>
               <UserInfo data={data} setData={setData} />
