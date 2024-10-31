@@ -57,16 +57,7 @@ const Navbar = () => {
         <Route path="/about" element={<About />} />
         <Route path="/login" element={<Login />} />
         <Route path="/OurTech" element={<OurTech />} />
-        <Route
-          path="/userInfo"
-          element={
-            <div>
-              <UserInfo data={data} setData={setData} />
-              <CalendarView />
-              <GraphView data={data} />
-            </div>
-          }
-        />
+        <Route path="/userInfo" element={<UserInfo />}/>
       </Routes>
     </>
   );

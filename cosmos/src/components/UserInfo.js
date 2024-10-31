@@ -7,11 +7,13 @@ const UserInfo = () => {
     <div className="user-info-container">
       <div className="login-box">
         <h2>User Calendar</h2>
-        <Calendar />
+        {/* Calendar was throwing an error so commented it out */}
+        {/* <Calendar /> */}
       </div>
       <div className="login-box">
         <h2>User Graph</h2>
-        <GraphView />
+        {/* GraphView was throwing an error so commented it out
+        <GraphView />  */}
       </div>
     </div>
   );
