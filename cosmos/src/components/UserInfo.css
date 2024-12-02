@@ -52,3 +52,15 @@
   letter-spacing: 1.5px;
   line-height: 1.2;
 }
+
+.topHeader{
+  font-weight: 700;
+  font-size: 56px;
+  font-family: 'Assistant', sans-serif;
+}
+
+.subHeader{
+  font-weight: 700;
+  font-size: 35px;
+  font-family: 'Assistant', sans-serif;
+}

@@ -138,9 +138,8 @@ const UserInfo = () => {
 
   return (
     <div>
-      <h1>Welcome, Kade!</h1>
-      <h2>Here is your vape data</h2>
-      <hr />
+      <h1 className="topHeader">Welcome, Kade!</h1>
+      <h2 className="subHeader">Here is your vape data</h2>
       <section className="sectionOne">
         <div style={{ marginBottom: "70px", maxWidth: "700px", margin: "0 auto" }}>
           <h2 className="headingOne">Weekly Data</h2>
