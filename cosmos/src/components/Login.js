@@ -10,26 +10,32 @@ const Login = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    
+
     try {
       // Make a POST request to your login endpoint
-      const response = await axios.post("https://localhost:7172/api/authentication/login", {
-        email: email,
-        password: password,
-      });
+      const response = await axios.post(
+        "https://localhost:7172/api/authentication/login",
+        {
+          email: email,
+          password: password,
+        }
+      );
 
       // If successful, response.data will have the token and other user info
       console.log("Login successful:", response.data);
-      
+
       // Save the token in localStorage (or cookies) for further API requests
       localStorage.setItem("token", response.data.accessToken);
 
       // Redirect to another page or update state to show user is logged in
       // Example: redirect to a dashboard
-      window.location.href = "/"; 
+      window.location.href = "/userInfo";
     } catch (error) {
       // Handle login failure
-      console.error("Login error:", error.response?.data?.message || error.message);
+      console.error(
+        "Login error:",
+        error.response?.data?.message || error.message
+      );
       setError(error.response?.data?.message || "Login failed");
     }
   };
@@ -59,7 +65,8 @@ const Login = () => {
             className="form-input"
           />
         </div>
-        {error && <p className="error-message">{error}</p>} {/* Display error message */}
+        {error && <p className="error-message">{error}</p>}{" "}
+        {/* Display error message */}
         <button type="submit" className="login-button">
           Login
         </button>

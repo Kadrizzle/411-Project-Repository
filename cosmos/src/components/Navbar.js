@@ -22,12 +22,16 @@ const Navbar = () => {
   return (
     <>
       <nav className="navbar">
-        <img src="/COSMOS-purple.png" alt="COSMOS Logo" className="navbar-logo" />
+        <img
+          src="/COSMOS-purple.png"
+          alt="COSMOS Logo"
+          className="navbar-logo"
+        />
         <ul className="navbar-nav">
           <li className="nav-item">
-            <Link className="nav-link" to="/">
+            {/* <Link className="nav-link" to="/">
               Home
-            </Link>
+            </Link> */}
           </li>
           <li className="nav-item">
             <Link className="nav-link" to="/login">
@@ -53,11 +57,11 @@ const Navbar = () => {
       </nav>
 
       <Routes>
-        <Route path="/" element={<Home />} />
+        {/* <Route path="/" element={<Home />} /> */}
         <Route path="/about" element={<About />} />
         <Route path="/login" element={<Login />} />
         <Route path="/OurTech" element={<OurTech />} />
-        <Route path="/userInfo" element={<UserInfo />}/>
+        <Route path="/userInfo" element={<UserInfo />} />
       </Routes>
     </>
   );
