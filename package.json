@@ -1,8 +1,12 @@
 {
   "dependencies": {
+    "chart.js": "^4.4.7",
+    "protected-route-react": "^1.0.1",
     "react": "^18.3.1",
     "react-calendar": "^5.0.0",
+    "react-chartjs-2": "^5.2.0",
     "react-dom": "^18.3.1",
+    "react-protected-route-component": "^0.1.1",
     "react-router-dom": "^6.26.1",
     "recharts": "^2.12.7"
   }
